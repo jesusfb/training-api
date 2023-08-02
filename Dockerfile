@@ -16,6 +16,6 @@ RUN chown -R www-data:www-data /app/storage
 
 RUN a2enmod rewrite
 
-RUN composer install --ignore-platform-reqs --no-scripts
+RUN composer install
 
 CMD bash -c "php artisan serve --host 0.0.0.0 --port 80"
